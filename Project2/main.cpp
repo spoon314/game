@@ -38,7 +38,7 @@ void menu(sf::RenderWindow& window)
     text4.setPosition(300, 190);//задаем позицию текста, отступая от центра камеры
 
     sf::Texture menuBackground;
-    menuBackground.loadFromFile("images/775.png");
+    menuBackground.loadFromFile("images/2.png");
     sf::Sprite menuBg(menuBackground);
     bool isMenu = true;
     menuBg.setPosition(0, 0);
@@ -169,13 +169,13 @@ int main()
     std::list<Object*>::iterator it;
 
     sf::Texture backtexture;
-    backtexture.loadFromFile("images/775.png");
+    backtexture.loadFromFile("images/2.png");
 
     sf::Sprite backsprite;
     backsprite.setTexture(backtexture);
     backsprite.setPosition(0, 0);
 
-    Player p("image.png", 200, 270, 32, 32);
+    Player p("3.png", 200, 270, 32, 32);
 
     srand(time(NULL));
     for (int i = 0; i < 100; i++) 
