@@ -1,23 +1,23 @@
 ﻿  main.cpp
-c:\users\404\source\repos\project2\project2\main.cpp(10): warning C4305: инициализация: усечение из "double" в "float"
-c:\users\404\source\repos\project2\project2\main.cpp(59): warning C4305: инициализация: усечение из "double" в "float"
-c:\users\404\source\repos\project2\project2\main.cpp(74): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(75): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(11): warning C4305: инициализация: усечение из "double" в "float"
+c:\users\404\source\repos\game\project2\main.cpp(80): warning C4305: инициализация: усечение из "double" в "float"
+c:\users\404\source\repos\game\project2\main.cpp(95): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(96): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\404\source\repos\project2\project2\main.cpp(107): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(108): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(129): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(130): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\404\source\repos\project2\project2\main.cpp(148): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(159): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(162): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(179): warning C4305: =: усечение из "double" в "float"
-c:\users\404\source\repos\project2\project2\main.cpp(180): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\404\source\repos\project2\project2\main.cpp(186): warning C4305: =: усечение из "double" в "float"
-c:\users\404\source\repos\project2\project2\main.cpp(187): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-  Project2.vcxproj -> C:\Users\404\source\repos\Project2\x64\Debug\Project2.exe
+c:\users\404\source\repos\game\project2\main.cpp(180): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(190): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(192): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(208): warning C4305: =: усечение из "double" в "float"
+c:\users\404\source\repos\game\project2\main.cpp(209): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\404\source\repos\game\project2\main.cpp(215): warning C4305: =: усечение из "double" в "float"
+c:\users\404\source\repos\game\project2\main.cpp(216): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Project2.vcxproj -> C:\Users\404\source\repos\game\x64\Debug\Project2.exe
