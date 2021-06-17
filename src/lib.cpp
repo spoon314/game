@@ -1,38 +1,31 @@
 #include "lib.hpp"
 #include <SFML/Graphics.hpp>
-#include <cstdlib> 
+#include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include <list>
 #include <sstream>
 #include <vector>
 
-void menu(sf::RenderWindow &window)
-{
-    sf::Font font;    
+void menu(sf::RenderWindow &window) {
+    sf::Font font;
     font.loadFromFile("20686.ttf");
-    sf::Text text1("", font, 50); 
-    text1.setFillColor(sf::Color(0, 100, 255)); 
+    sf::Text text1("", font, 50);
+    text1.setFillColor(sf::Color(0, 100, 255));
     sf::Text text2("", font, 50);
     text2.setFillColor(sf::Color(0, 100, 255));
     sf::Text text3("", font, 20);
     text3.setFillColor(sf::Color(0, 100, 255));
     sf::Text text4("", font, 20);
     text4.setFillColor(sf::Color(0, 100, 255));
-    text1.setString("new game");             
-    text1.setPosition(100,
-                      30);
-    text2.setString("exit");     
-    text2.setPosition(100,
-                      150);
-    text3.setString(
-        "rules: collect as many candies");
-    text3.setPosition(300,
-                      150); 
-    text4.setString(
-        "as possible in 10 seconds (max 100)");                                                       
-    text4.setPosition(300,
-                      190);
+    text1.setString("new game");
+    text1.setPosition(100, 30);
+    text2.setString("exit");
+    text2.setPosition(100, 150);
+    text3.setString("rules: collect as many candies");
+    text3.setPosition(300, 150);
+    text4.setString("as possible in 10 seconds (max 100)");
+    text4.setPosition(300, 190);
     sf::Texture menuBackground;
     menuBackground.loadFromFile("images/2.png");
     sf::Sprite menuBg(menuBackground);
@@ -60,10 +53,10 @@ void menu(sf::RenderWindow &window)
         }
         //заимствовано (конец)
         window.draw(menuBg);
-        window.draw(text1); 
-        window.draw(text2); 
+        window.draw(text1);
+        window.draw(text2);
         window.draw(text3);
-        window.draw(text4); 
+        window.draw(text4);
         window.display();
     }
 }
