@@ -75,6 +75,7 @@ int main() {
         p.update(time);
 
         for (it = candy.begin(); it != candy.end();) {
+            
             if ((*it)->life == false) {
                 it = candy.erase(it);
             } else
