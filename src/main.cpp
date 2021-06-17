@@ -71,6 +71,7 @@ int main() {
                     sf::IntRect(int(shot) * 32, 32, 32, 32));
             }
         }
+        
         p.update(time);
 
         for (it = candy.begin(); it != candy.end();) {
