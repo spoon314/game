@@ -1,6 +1,6 @@
 #include "lib.hpp"
 #include <SFML/Graphics.hpp>
-#include <cstdlib> // this is where srand() is defined
+#include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include <list>
@@ -10,14 +10,9 @@
 int main() {
     float shot = 0;
     sf::Font font;
-    font.loadFromFile("20686.ttf"); //передаем нашему шрифту файл шрифта
-    sf::Text text(
-        "", font,
-        30); //создаем объект текст. закидываем в объект текст строку, шрифт,
-             //размер шрифта(в пикселях);//сам объект текст (не строка)
-    text.setFillColor(
-        sf::Color(0, 100, 255)); //покрасили текст в красный. если убрать эту
-                                 //строку, то по умолчанию он белый
+    font.loadFromFile("20686.ttf");
+    sf::Text text("", font, 30);
+    text.setFillColor(sf::Color(0, 100, 255));
 
     sf::RenderWindow window(sf::VideoMode(640, 300), "Test");
     window.setFramerateLimit(60); // количество кадров в секунду
@@ -41,7 +36,7 @@ int main() {
         candy.push_back(std::make_unique<Candy>("1.png", rand() % 600 + 30,
                                                 rand() % -500 + 0, 20, 18));
 
-    sf::Clock clock; // timer
+    sf::Clock clock; 
     sf::Clock gameTimeClock;
     int gameTime = 0;
 
@@ -70,25 +65,18 @@ int main() {
                     sf::IntRect(int(shot) * 32, 32, 32, 32));
             }
         }
-        
+
         p.update(time);
 
-        for (it = candy.begin(); it != candy.end();) {
-            if ((*it)->life == false) {
-                it = candy.erase(it);
-            } else
-                it++;
-        }
-
         for (it = candy.begin(); it != candy.end(); it++) {
+            (*it)->update(time);
+            if ((*it)->life == false) 
+                it = candy.erase(it);
             if ((*it)->getRect().intersects(p.getRect())) {
                 (*it)->life = false;
                 p.playerScore += 1;
             }
         }
-
-        for (it = candy.begin(); it != candy.end(); it++)
-            (*it)->update(time);
 
         if (gameTime == 10) {
             gameTime = 0;
