@@ -52,7 +52,6 @@ int main() {
 
         clock.restart();
         time = time / 800;
-        // std::cout << gameTime << std::endl;
 
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -75,7 +74,6 @@ int main() {
         p.update(time);
 
         for (it = candy.begin(); it != candy.end();) {
-            
             if ((*it)->life == false) {
                 it = candy.erase(it);
             } else
