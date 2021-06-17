@@ -1,49 +1,38 @@
 #include "lib.hpp"
 #include <SFML/Graphics.hpp>
-#include <cstdlib> // this is where srand() is defined
+#include <cstdlib> 
 #include <ctime>
 #include <iostream>
 #include <list>
 #include <sstream>
 #include <vector>
 
-void menu(sf::RenderWindow &window) //функция вызова окна меню
+void menu(sf::RenderWindow &window)
 {
-    sf::Font font;                  ///< шрифт
-    font.loadFromFile("20686.ttf"); ///< загрузка шрифта
-    sf::Text text1("", font, 50);   ///< формирование строки
-    text1.setFillColor(sf::Color(0, 100, 255)); ///< заливка шрифта
+    sf::Font font;    
+    font.loadFromFile("20686.ttf");
+    sf::Text text1("", font, 50); 
+    text1.setFillColor(sf::Color(0, 100, 255)); 
     sf::Text text2("", font, 50);
     text2.setFillColor(sf::Color(0, 100, 255));
     sf::Text text3("", font, 20);
     text3.setFillColor(sf::Color(0, 100, 255));
     sf::Text text4("", font, 20);
     text4.setFillColor(sf::Color(0, 100, 255));
-
-    text1.setString("new game"); //задаем строку тексту и вызываем
-                                 //сформированную выше строку методом .str()
+    text1.setString("new game");             
     text1.setPosition(100,
-                      30); //задаем позицию текста, отступая от центра камеры
-
-    text2.setString("exit"); //задаем строку тексту и вызываем сформированную
-                             //выше строку методом .str()
+                      30);
+    text2.setString("exit");     
     text2.setPosition(100,
-                      150); //задаем позицию текста, отступая от центра камеры
-
+                      150);
     text3.setString(
-        "rules: collect as many candies"); //задаем строку тексту и вызываем
-                                           //сформированную выше строку методом
-                                           //.str()
+        "rules: collect as many candies");
     text3.setPosition(300,
-                      150); //задаем позицию текста, отступая от центра камеры
-
+                      150); 
     text4.setString(
-        "as possible in 10 seconds (max 100)"); //задаем строку тексту и
-                                                //вызываем сформированную выше
-                                                //строку методом .str()
+        "as possible in 10 seconds (max 100)");                                                       
     text4.setPosition(300,
-                      190); //задаем позицию текста, отступая от центра камеры
-
+                      190);
     sf::Texture menuBackground;
     menuBackground.loadFromFile("images/2.png");
     sf::Sprite menuBg(menuBackground);
@@ -58,23 +47,23 @@ void menu(sf::RenderWindow &window) //функция вызова окна ме�
         }
 
         window.clear();
-
+        //заимствовано (начало)
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             if (sf::IntRect(100, 30, 300, 50)
                     .contains(sf::Mouse::getPosition(window)))
-                isMenu = false; //если нажали первую кнопку, то выходим из меню
+                isMenu = false;
             if (sf::IntRect(100, 150, 300, 50)
                     .contains(sf::Mouse::getPosition(window))) {
                 window.close();
                 isMenu = false;
             }
         }
-
+        //заимствовано (конец)
         window.draw(menuBg);
-        window.draw(text1); //рисую текст
-        window.draw(text2); //рисую текст
-        window.draw(text3); //рисую текст
-        window.draw(text4); //рисую текст
+        window.draw(text1); 
+        window.draw(text2); 
+        window.draw(text3);
+        window.draw(text4); 
         window.display();
     }
 }
@@ -137,7 +126,7 @@ void Player::update(float time) {
     speed = 0;
     sprite.setPosition(x, y);
 }
-
+//заимствовано (начало)
 void Player::Left(float &shot, float time) {
     select = 0;
     speed = 0.1;
@@ -153,3 +142,4 @@ void Player::Right(float &shot, float time) {
     if (shot > 4)
         shot -= 4;
 }
+//заимствовано (конец)

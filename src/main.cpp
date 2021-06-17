@@ -53,7 +53,7 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
+        //заимствовано (начало)
         if (p.life) {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
                 p.Left(shot, time);
@@ -65,6 +65,7 @@ int main() {
                     sf::IntRect(int(shot) * 32, 32, 32, 32));
             }
         }
+        //заимствовано (конец)
 
         p.update(time);
 
