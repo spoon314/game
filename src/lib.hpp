@@ -56,6 +56,6 @@ public:
     Player(sf::String F, int X, int Y, float W, float H);///< функция задающая значения, описанные в классе
     sf::FloatRect getRect();///< функция, берущая прямоугольник от размеров спрайта
     void update(float time);///< функция, отвечающая за обновление спрайта
-    void Left(float &shot, float time);
-    void Right(float &shot, float time);
+    void Left(float &shot, float time);///< функция, отвечающая за перемещение персонажа влево
+    void Right(float &shot, float time);///< функция, отвечающая за перемещение персонажа вправо
 };
