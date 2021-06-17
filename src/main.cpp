@@ -36,7 +36,7 @@ int main() {
         candy.push_back(std::make_unique<Candy>("1.png", rand() % 600 + 30,
                                                 rand() % -500 + 0, 20, 18));
 
-    sf::Clock clock; 
+    sf::Clock clock;
     sf::Clock gameTimeClock;
     int gameTime = 0;
 
@@ -70,7 +70,7 @@ int main() {
 
         for (it = candy.begin(); it != candy.end(); it++) {
             (*it)->update(time);
-            if ((*it)->life == false) 
+            if ((*it)->life == false)
                 it = candy.erase(it);
             if ((*it)->getRect().intersects(p.getRect())) {
                 (*it)->life = false;
